@@ -2,10 +2,6 @@
 //
 // Convenience routines to make it easier to build a service
 
-require('defaultable')(module,
-  { 'convenient'    : true
-  , 'ttl'           : 3600
-  }, function(module, exports, DEFS, require) {
 
 function noop() {}
 
@@ -14,6 +10,11 @@ module.exports = { 'init_response' : init_response
                  , 'seconds': seconds
                  , 'serial': serial
                  }
+
+var DEFS =  {
+'convenient'    : true,
+'ttl'           : 3600
+};
 
 if(! DEFS.convenient) {
   module.exports.init_response = noop
@@ -126,4 +127,3 @@ function seconds(value) {
 }
 
 
-}) // defaultable

@@ -2,10 +2,6 @@
 //
 // Server routines
 
-require('defaultable')(module,
-  {
-  }, function(module, exports, DEFS, require) {
-
 var net = require('net')
 var util = require('util')
 var dgram = require('dgram')
@@ -244,4 +240,3 @@ Response.prototype.end = function(value) {
 }
 
 
-}) // defaultable
